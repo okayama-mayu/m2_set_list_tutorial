@@ -1,0 +1,8 @@
+<h1><%= @artist.name %></h1>
+<h3>Average Song Length: 
+    <% length = @artist.songs.map do |song| %>
+        <% song.length %>
+    <% end %>
+    <%= length.sum / length.size  %></h3>
+
+<h3>Total Song Count: <%= @artist.songs.length %></h3>
